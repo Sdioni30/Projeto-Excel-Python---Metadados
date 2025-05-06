@@ -42,7 +42,7 @@ for item in resultado_linha_tabela:
     tempo_formatado = tempo_audio_em_minutos(tempo_em_segundos)
     list_horas = item[1].split(':') if item[1] else ["00"]
     data = item[0] if item[0] else "Desconhecido"
-    data_separada = data.split('/')
+    data_separada = data.split('-')
 
     nome_arquivo = repo_sftp.listar_pastas_sftp_por_data(telefone, data_separada, list_horas)
         
